@@ -8,17 +8,17 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     private Long id;
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false)
     private String firstname;
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false)
     private String lastname;
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false)
     private String email;
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false)
     private String jobTitle;
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false)
     private String phone;
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false)
     private String imageUrl;
 
     public Employee(String firstname, String lastname, String email, String jobTitle, String phone, String imageUrl) {
