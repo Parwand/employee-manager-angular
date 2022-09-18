@@ -31,6 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+.angular
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
@@ -42,6 +43,9 @@ build/
 
 # Node
 employee-manager-angular/node_modules
+angular-app/node_modules
+angular-app/.angular
+angular-app/.vscode
 npm-debug.log
 yarn-error.log
 
