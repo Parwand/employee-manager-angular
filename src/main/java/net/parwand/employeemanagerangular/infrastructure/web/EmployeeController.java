@@ -33,7 +33,7 @@ public class EmployeeController {
         return new ResponseEntity<>(newEmployee, HttpStatus.CREATED);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public ResponseEntity<Employee> updateEmployee(@RequestBody Employee employee) {
         Employee newEmployee = employeeService.updateEmployee(employee);
         return new ResponseEntity<>(newEmployee, HttpStatus.CREATED);
@@ -43,7 +43,7 @@ public class EmployeeController {
         Employee employee = employeeService.findEmployeeById(id);
         return new ResponseEntity<>(employee, HttpStatus.FOUND);
     }
-    @PostMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Employee> deleteEmployeeById(@PathVariable Long id) {
         employeeService.deleteEmployeeById(id);
         return new ResponseEntity<>(HttpStatus.OK);
