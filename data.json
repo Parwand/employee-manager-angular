@@ -1,0 +1,16 @@
+[{
+  "firstname": "Parwand",
+  "lastname": "Alsino",
+  "email": "parwand.alsino@hhu.de",
+  "jobTitle": "junior software engineer",
+  "phone": "+49 15744492136",
+  "imageUrl": "https://localhost:8080/parwand.jpg"
+},
+  {
+    "firstname": "Lea",
+    "lastname": "Maximillian",
+    "email": "lea.maximillian@hhu.de",
+    "jobTitle": "software engineer",
+    "phone": "+49 15744492136",
+    "imageUrl": "https://localhost:8080/lea.jpg"
+  }]
