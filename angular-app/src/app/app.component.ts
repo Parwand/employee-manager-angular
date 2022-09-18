@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {EmployeeService} from "./employee.service";
-import {HttpErrorResponse} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {Employee} from "./employee";
 import {NgForm} from "@angular/forms";
 
@@ -60,6 +60,13 @@ export class AppComponent implements OnInit{
       (error: HttpErrorResponse)=>{
         alert(error.message)
       }
+    )
+  }
+
+  public onDeleteEmployee(id: number): void {
+    this.employeeService.deleteEmployees(id).subscribe(
+      (response: void) =>{this.getEmployees();},
+      (error: HttpErrorResponse) =>{ alert(error.message)}
     )
   }
 
