@@ -44,8 +44,9 @@ public class EmployeeController {
         return new ResponseEntity<>(employee, HttpStatus.FOUND);
     }
     @PostMapping("/delete/{id}")
-    public void deleteEmployeeById(@PathVariable Long id) {
+    public ResponseEntity<Employee> deleteEmployeeById(@PathVariable Long id) {
         employeeService.deleteEmployeeById(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
