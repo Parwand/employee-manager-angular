@@ -44,10 +44,18 @@ build/
 # Node
 employee-manager-angular/node_modules
 angular-app/node_modules
-angular-app/.angular
 angular-app/.vscode
 npm-debug.log
 yarn-error.log
+
+# Miscellaneous
+angular-app/.angular/cache
+angular-app/.sass-cache/
+angular-app/connect.lock
+angular-app/coverage
+angular-app/libpeerconnection.log
+angular-app/testem.log
+angular-app/typings
 
 # IDEs and editors
 .idea/
