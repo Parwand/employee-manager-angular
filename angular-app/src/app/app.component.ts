@@ -33,6 +33,22 @@ export class AppComponent implements OnInit{
     )
   }
 
+  public searchEmployees(key: string): void {
+    const results: Employee[] = [];
+    for(let employee of this.employees) {
+      if(employee.firstname.toLowerCase().indexOf(key.toLowerCase()) !== -1
+        || employee.lastname.toLowerCase().indexOf(key.toLowerCase()) !== -1
+        || employee.email.toLowerCase().indexOf(key.toLowerCase()) !== -1
+        || employee.phone.toLowerCase().indexOf(key.toLowerCase()) !== -1){
+        results.push(employee);
+      }
+    }
+    this.employees = results;
+    if(results.length ===0 || !key) {
+      this.getEmployees();
+    }
+  }
+
 
   public onAddEmployee(addForm: NgForm): void {
     const close = document.getElementById('add-employee-form');
